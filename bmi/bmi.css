@@ -1,0 +1,27 @@
+* {
+      background-color: lightyellow;
+}
+
+table {
+      border: 1px solid black;
+}
+
+td {
+      border: 1px solid black;
+}
+
+#button {
+      margin-left: 150px;
+}
+
+#height {
+      margin-left: 25px;
+}
+
+#weight {
+      margin-left: 3px;
+}
+
+#benchmark {
+      margin-left: 30px;
+}
