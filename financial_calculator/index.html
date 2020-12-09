@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>TVM Calculator</title>
+            <link rel="stylesheet" href="index.css">
+      </head>
+      <body>
+            <table>
+                  <tr>
+                        <td class="text">Present Value</td>
+                        <td><input type="number" id="PV"></td>
+                        <td><button type="button" class="button">PV</button></td>
+                  </tr>
+                  <tr>
+                        <td class="text">Payments</td>
+                        <td><input type="number" id="PMT"></td>
+                        <td><button type="button" class="button">PMT</button></td>
+                  </tr>
+                  <tr>
+                        <td class="text">Future Value</td>
+                        <td><input type="number" id="FV"></td>
+                        <td><button type="button" class="button">FV</button></td>
+                  </tr>
+                  <tr>
+                        <td class="text">Annual Rate%</td>
+                        <td><input type="number" id="rate"></td>
+                        <td><button type="button" class="button">Rate</button></td>
+                  </tr>
+                  <tr>
+                        <td class="text">Periods</td>
+                        <td><input type="number" id="per"></td>
+                        <td><button type="button" class="button">Periods</button></td>
+                  </tr>
+                  <tr>
+                        <td class="text">Compounding</td>
+                        <td colspan="2">
+                              <select id="compound">
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Biweekly</option>
+                                    <option>Semimonthly</option>
+                                    <option>Monthly</option>
+                                    <option>Quarterly</option>
+                                    <option>Semiannually</option>
+                                    <option>Annually</option>
+                              </select>      
+                        </td>
+                  </tr>
+            </table>
+            <script src="index.js"></script>
+      </body>
+</html>

@@ -1,0 +1,30 @@
+#compound {
+      width: 300px;
+}
+
+.text {
+      text-align: right;
+}
+
+.button {
+      width: 80px;
+      background-color: lightgrey;
+      color: blue;
+      font-weight: bold;
+      text-decoration: underline;
+      border-radius: 4px;
+}
+
+* {
+      font-size: large;
+      margin: 5px;
+      font-family: 'Times New Roman', Times, serif;
+}
+
+input {
+      border-radius: 5px;
+}
+
+select {
+      border-radius: 5px;
+}
