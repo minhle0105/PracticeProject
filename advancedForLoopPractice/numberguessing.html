@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Number guessing game</title>
+            <style>
+                  * {
+                        background-color: lightgreen;
+                        text-align: center;
+                  }
+                  button {
+                        font-weight: bold;
+                        width: 100px;
+                        height: 50px;
+                        background-color: lightslategray;
+                        color: white;
+                  }
+                  p {
+                        font-weight: bold;
+                  }
+
+                  td {
+                        text-align: right;
+                  }
+
+            </style>
+      </head>
+      <body>
+            <p>NUMBER GUESSING GAME</p><br>
+            <button type="button" id="startButton" onclick="startGame()">Bắt đầu chơi</button>
+            <script>
+                  function startGame() {
+                        document.write("Bạn muốn đoán trong khoảng nào?<br>");
+                        document.write("<table>")
+                        document.write(`<tr><td><p>Từ</td><td><input type='number' id='lowerBound' value='lowerBound' onchange="checkInput()"></p></td></tr>`)
+                        document.write(`<tr><td><p>Đến</td><td><input type='number' id='upperBound' value='upperBound' onchange="checkInput()"></p></td></tr>`)
+                        document.write("</table>")
+                  }
+
+                  function checkInput() {
+                        if (document.getElementById("upperBound").value && document.getElementById("lowerBound").value) {
+                              playGame();
+                        }
+                  }
+
+                  function playGame() {
+                        let computerNum = Math.floor(Math.random() * document.getElementById("upperBound").value + document.getElementById("lowerBound").value);
+                        let answerFalse = true;
+                        while (answerFalse) {
+                              let userNum = parseInt(prompt("Nhap so ban doan: "));
+                              if (userNum == computerNum) {
+                                    alert("Ban da doan dung");
+                                    answerFalse = false;
+                              }
+                              else {
+                                    alert("Ban da doan sai. Moi doan lai.")
+                              }
+                        }
+                  }
+
+            </script>
+      </body>
+</html>
