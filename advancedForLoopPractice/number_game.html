@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Number game 1</title>
+      </head>
+      <body>
+            <h1>Sum of first 30 numbers divisible by 7.</h1>
+            <script>
+                  let result = 0;
+                  let count = 0;
+                  let i = 7;
+                  let list = [];
+                  while (count<=30) {
+                        if(i%7==0) {
+                              result += i;    
+                              count++;
+                        }
+                  i++;
+                  }
+                  document.write(result);
+            </script>
+      </body>
+</html>

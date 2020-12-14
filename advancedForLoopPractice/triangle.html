@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Ve tam giac vuong</title>
+            <style>
+                  *{
+                        font-size: 30px;
+                        font-weight: bold;
+                  }
+            </style>
+      </head>
+      <body>
+            <script>
+                  function draw1() {
+                        for (let i = 1; i < 6; i++) {
+                              for (let j = 1; j <= i; j++) {
+                                    document.write("* ");
+                              }
+                              document.write("<br>")
+                        }
+                        document.write("<br>")
+                  }
+                  draw1()
+                  function draw2() {
+                        for (let i = 1; i < 6; i++) {
+                              for (let j = 6; j >= i; j--) {
+                                    document.write("* ");
+                              }
+                              document.write("<br>")
+                        }
+                        document.write("<br>")
+                  }
+                  draw2()
+                  function draw3() {
+                        let n = 5;
+                        for (let i = 1; i <= n; i++) {
+                              for (let j = n-1; j >= i; j--) {
+                                    document.write("_ ");
+                                    }
+                              for (let k = 1; k <= i; k++) {
+                                    document.write("* ");
+                                    }
+                                    document.write("<br>");
+                              }   
+                              document.write("<br>");
+                        }
+                  draw3()
+                  function draw4() {
+                        let n = 5;
+                        for (let i = n; i >= 1; i--) {
+                              for (let j = n-1; j >= i; j--) {
+                                    document.write("_ ");
+                                    }
+                              for (let k = 1; k <= i; k++) {
+                                    document.write("* ");
+                                    }
+                                    document.write("<br>");
+                              }   
+                              document.write("<br>");
+                        }
+                  draw4()
+
+                  function draw_recangle() {
+                        let n = 4;
+                        for (let i = 1; i <= n; i++) {
+                              if (i == 1 || i == 4) {
+                                    document.write("* ".repeat(10))
+                              }
+                              else { 
+                                    document.write("* " + "_ ".repeat(8) + "* ")
+                              }
+                              document.write("<br>")
+
+                        }
+            }
+                  draw_recangle()
+            </script>
+      </body>
+</html>

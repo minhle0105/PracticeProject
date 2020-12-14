@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Tinh toan lai suat</title>
+      </head>
+      <body>
+            <script>
+                  let amount = parseInt(prompt("Nhap vao so tien vay: "));
+                  let interest = parseInt(prompt("Nhap vao lai suat hang thang: "));
+                  let month = parseInt(prompt("Nhap vao so thang vay: "));
+                  let interestRate = interest/100;
+                  let totalAmount = Math.floor(Math.pow((amount*(1+interestRate)),month));
+                  alert(`Tong so tien can tra, ca goc lan lai sau ${month} thang la: ${totalAmount}`);
+            </script>
+      </body>
+</html>
