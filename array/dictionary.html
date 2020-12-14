@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Tu dien</title>
+            <style>
+                  #head {
+                        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        color: blue;
+                        height: 70px;
+                        margin-right: 15px;
+                        margin-left: 15px;
+                        margin-top: 10px;
+                        margin-bottom: 0px;
+                        padding-top: 10px;
+                        background-color: white;
+                  }
+                  #word {
+                        width: 83%;
+                        border-radius: 5px;
+                  }
+                  #language {
+                        width: 181px;
+                        border-radius: 5px;
+                  }
+                  button {
+                        border-radius: 8px;
+                        background-color: blue;
+                        color: white;
+                        font-weight: bold;
+                  }
+                  button:hover {
+                        background-color: orange;
+                  }
+
+                  #content {
+                        margin-left: 15px;
+                        margin-right: 15px;
+                  }
+            </style>
+      </head>
+      <body>
+            <div id="head">
+                  <img src="https://vdict.com/cdn/images/logo_v3.gif" width="175" height="43" alt="Vdict">
+            </div>
+            <div id="content">
+                  <input type="text" id="word">
+                  <button type="button" id="lookup" onclick="lookupWords()">Tìm</button>
+                  <select id="language">
+                        <option value="eng">English - Vietnamese</option>
+                        <option value="viet">Vietnamese - English</option>
+                  </select>
+                  <div id="result"></div>
+            </div>
+            <script>
+                  function lookupWords() {
+                        let engWords = ['apple', 'banana', 'car', 'water'];
+                        let vietWords = ['quả táo', 'quả chuối', 'xe ô tô', 'nước'];
+                        let user_word = document.getElementById("word").value;
+                        let user_choice = document.getElementById("language").value;
+                        if (user_choice === 'eng') {
+                              if (engWords.includes(user_word)) {
+                                    document.getElementById("result").innerText = vietWords[engWords.indexOf(user_word)];
+                              }
+                              else {
+                                    document.getElementById("result").innerText = "Word not found";
+                              }
+                        }
+                        else {
+                              if (vietWords.includes(user_word)) {
+                                    document.getElementById("result").innerText = engWords[vietWords.indexOf(user_word)];
+                              }
+                              else {
+                                    document.getElementById("result").innerText = "Word not found";
+                              }
+                        }
+                  }
+            </script>
+      </body>
+</html>
