@@ -23,7 +23,7 @@
                   draw1()
                   function draw2() {
                         for (let i = 1; i < 6; i++) {
-                              for (let j = 6; j >= i; j--) {
+                              for (let j = 6; j > i; j--) {
                                     document.write("* ");
                               }
                               document.write("<br>")
@@ -35,7 +35,7 @@
                         let n = 5;
                         for (let i = 1; i <= n; i++) {
                               for (let j = n-1; j >= i; j--) {
-                                    document.write("_ ");
+                                    document.write("&nbsp &nbsp");
                                     }
                               for (let k = 1; k <= i; k++) {
                                     document.write("* ");
@@ -49,7 +49,7 @@
                         let n = 5;
                         for (let i = n; i >= 1; i--) {
                               for (let j = n-1; j >= i; j--) {
-                                    document.write("_ ");
+                                    document.write("&nbsp &nbsp");
                                     }
                               for (let k = 1; k <= i; k++) {
                                     document.write("* ");
@@ -67,7 +67,7 @@
                                     document.write("* ".repeat(10))
                               }
                               else { 
-                                    document.write("* " + "_ ".repeat(8) + "* ")
+                                    document.write("* " + "&nbsp &nbsp".repeat(8) + "* ")
                               }
                               document.write("<br>")
 
