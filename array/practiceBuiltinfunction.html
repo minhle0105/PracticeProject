@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Luyen tap ham co san</title>
+            <style>
+                  * {
+                        padding: 20px;
+                  }
+                  input {
+                        margin-bottom: 10px;
+                        width: 250px;
+                  }
+                  #exercise1 {
+                        background-color: lightblue;
+                        display: block;
+                  }
+                  #exercise2 {
+                        background-color: lightcyan;
+                        display: block;
+                  }
+                  #exercise3 {
+                        background-color: beige;
+                        display: block;
+                  }
+
+                  button#add, button#button1 {
+                        width: 150px;
+                        height: 60px;
+                  }
+
+                  button#button2, button#button3 {
+                        width: 300px;
+                        height: 60px;
+                  }
+
+            </style>
+      </head>
+      <body>
+            <div id="exercise1">
+                  <input type="text" id="bai1" placeholder="Nhap vao tung phan tu trong mang">
+                  <button id="add" onclick="addElement()">Add to array</button>
+                  <button id="button1" onclick="baitap1()">Giai bai 1</button><br>
+                  <div id="result1"></div>
+            </div>
+            <div id="exercise2">
+                  <input type="text" id="bai2" placeholder="Nhap vao day so bai 2">
+                  <button id="button2" onclick="baitap2()">Bai 2</button><br>
+                  <div id="result2"></div>
+            </div>
+            <div id="exercise3">
+                  <input type="text" id="bai3" placeholder="Nhap vao chuoi bai 3">
+                  <button id="button3" onclick="baitap3()">Bai 3</button><br>
+                  <div id="result3"></div>
+            </div>
+            <script>
+                  // Giai bai 1
+                  let index = 0;
+                  let arr = [];
+                  function addElement() {
+                        arr[index] = document.getElementById("bai1").value;
+                        index++;
+                  }
+                  function baitap1() {
+                        document.getElementById("result1").innerText = arr.toString()
+                  }
+                  
+                  //Giai bai 2
+                  function baitap2() {
+                        let num = document.getElementById("bai2").value;
+                        let num_str = num.toString()
+                        let result = [num_str[0]]
+                        for (let x=1; x<num_str.length; x++) {
+                              if((num_str[x-1]%2 === 0)&&(num_str[x]%2 === 0)) {
+                                    result.push('-', num_str[x]);
+                              }
+                              else {
+                                    result.push(num_str[x]);
+                              }
+                        }
+                        document.getElementById("result2").innerText = result.join('');
+                  }
+
+                  //Giai bai 3
+                  function baitap3() {
+                        let str = document.getElementById("bai3").value;
+                        let result = [];
+                        for (let i = 0; i < str.length; i++) {
+                              if (str[i] === str[i].toLowerCase()) {
+                                    result.push(str[i].toUpperCase())
+                              }
+                              else if (str[i] === str[i].toUpperCase()) {
+                                    result.push(str[i].toLowerCase())
+                              }
+                              else {
+                                    result.push(str[i])
+                              }
+                        }
+                        document.getElementById("result3").innerText = result.join("")
+                  }
+            </script>
+      </body>
+</html>
