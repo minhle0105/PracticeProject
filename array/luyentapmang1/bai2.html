@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Bai 2</title>
+      </head>
+      <body>
+            <script>
+                  function getList() {
+                        let count = 0;
+                        let lst = [];
+                        while (count < 10) {
+                              let userNum = parseInt(prompt("Enter a number to add "));
+                              if (lst.includes(userNum)) {
+                                    alert("Số đã tồn tại trong danh sách. Vui lòng nhập số khác");
+                              }
+                              else {
+                                    lst.push(userNum);
+                                    count++;
+                              }
+                        }
+                        return lst;
+                  }
+
+                  function getMax () {
+                        let userList = getList();
+                        let maxNum = userList[0];
+                        let maxIndex = 0;
+                        for (let i = 1; i < userList.length; i++) {
+                              if (userList[i] > maxNum) {
+                                    maxNum = userList[i];
+                                    maxIndex = i+1;
+                              }
+                        }
+                        alert(`Số lớn nhất trong dãy là ${maxNum} tại vị trí ${maxIndex}`);
+                  }
+                  getMax();
+            </script>
+      </body>
+</html>
