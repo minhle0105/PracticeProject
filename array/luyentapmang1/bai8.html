@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Bai 8</title>
+      </head>
+      <body>
+            <script>
+                  function getList() {
+                        let count = 0;
+                        let lst = [];
+                        while (count < 10) {
+                              let userNum = parseInt(prompt("Enter a number to add "));
+                              lst.push(userNum);
+                              count++;
+                        }
+                        return lst;
+                  }
+
+                  function reverse() {
+                        let userList = insertionSort()
+                        let reverseUserList = []
+                        for (let i = userList.length - 1; i >= 0; i--) {
+                              reverseUserList.push(userList[i])
+                        }
+                        alert(reverseUserList)
+                  }
+
+                  function insertionSort() {
+                        let array = getList();
+                        for (let i = 1; i < array.length; i ++) {
+                              let key = array[i];
+                              while (array[i-1] > key && i > 0) {
+                                    array[i] = array[i-1];
+                                    array[i-1] = key;
+                                    i--;
+                              }
+                        }
+                        return array;
+                  }
+                  reverse()
+            </script>
+      </body>
+</html>

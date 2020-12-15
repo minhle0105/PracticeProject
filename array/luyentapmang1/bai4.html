@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Bai 4</title>
+      </head>
+      <body>
+            <script>
+                  function getList() {
+                        let n = parseInt(prompt("How many numbers do you want? "));
+                        let count = 0;
+                        let lst = [];
+                        while (count < n) {
+                              let userNum = parseInt(prompt("Enter a number to add "));
+                                    lst.push(userNum);
+                                    count++;
+                        }
+                        return lst;
+                  }
+
+                  function reverse() {
+                        let userList = getList()
+                        let reverseUserList = []
+                        for (let i = userList.length - 1; i >= 0; i--) {
+                              reverseUserList.push(userList[i])
+                        }
+                        alert(reverseUserList)
+                  }
+                  
+                  reverse()
+                  
+            </script>
+      </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Bai 9</title>
+      </head>
+      <body>
+            <script>
+                  function getListA() {
+                        let count = 0;
+                        let lst = [];
+                        while (count < 10) {
+                              let userNum = parseInt(prompt("Enter a number to add to list A"));
+                              lst.push(userNum);
+                              count++;
+                        }
+                        return lst;
+                  }
+
+                  function getListB() {
+                        let count = 0;
+                        let lst = [];
+                        while (count < 10) {
+                              let userNum = parseInt(prompt("Enter a number to add to list B"));
+                              lst.push(userNum);
+                              count++;
+                        }
+                        return lst;
+                  }
+
+                  function printListC() {
+                        let listA = getListA();
+                        let listB = getListB();
+                        let listC = listA.concat(listB);
+                        alert(listC);
+                  }
+
+                  printListC()
+
+            </script>
+      </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Bai 7</title>
+      </head>
+      <body>
+            <script>
+                  function getList() {
+                        let n = parseInt(prompt("How many numbers do you want? "));
+                        let count = 0;
+                        let lst = [];
+                        while (count < n) {
+                              let userNum = parseInt(prompt("Enter a number to add "));
+                                    lst.push(userNum);
+                                    count++;
+                        }
+                        return lst;
+                  }
+
+                  function checkList() {
+                        let userList = getList();
+                        let checkNumber = parseInt(prompt("Enter a number to check"));
+                        for (let i = 0; i < userList.length; i++) {
+                              if (userList[i] == checkNumber) {
+                                    for (let j = i; j < userList.length - 1; j ++) {
+                                          userList[j] = userList[j+1];
+                                    }
+                                    userList[userList.length - 1] = null;
+                              }
+                        }
+                        alert(userList)
+                  }
+
+                  checkList()
+                  
+            </script>
+      </body>
+</html>

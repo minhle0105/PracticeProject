@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Bai 3</title>
+      </head>
+      <body>
+            <script>
+                  function getList() {
+                        let n = parseInt(prompt("How many numbers do you want? "));
+                        let count = 0;
+                        let lst = [];
+                        while (count < n) {
+                              let userNum = parseInt(prompt("Enter a number to add "));
+                                    lst.push(userNum);
+                                    count++;
+                        }
+                        return lst;
+                  }
+
+                  function findMaxAverage() {
+                        let userList = getList();
+                        let maxNum = userList[0];
+                        let sum = userList[0];
+                        for (let i = 1; i < userList.length; i++) {
+                              sum += userList[i];
+                              if (userList[i] > maxNum) {
+                                    maxNum = userList[i]
+                              }
+                        }
+                        alert(`Số lớn nhất trong dãy là ${maxNum}. Giá trị trung bình của dãy số là ${sum/userList.length}`);
+                  }
+                  
+                  findMaxAverage()
+                  
+            </script>
+      </body>
+</html>
