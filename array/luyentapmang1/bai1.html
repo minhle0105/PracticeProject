@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Bai 1</title>
+      </head>
+
+      <body>
+            <script>
+                  function getList() {
+                        let count = 0;
+                        let lst = [];
+                        while (count < 10) {
+                              let userNum = parseInt(prompt("Enter a number to add "));
+                              lst.push(userNum)
+                              count++;
+                        }
+                        return lst;
+                  }
+
+                  function calculate() {
+                        let count = 0;
+                        let userList = getList();
+                        for (let i = 0; i < userList.length; i++) {
+                              if (userList[i] >= 10) {
+                                    count ++;
+                              }
+                        }
+                        alert(`Trong dãy số đã nhập, có ${count} số lớn hơn hoặc bằng 10`)
+                  }
+
+                  calculate()
+                  
+
+                  
+            </script>
+      </body>
+</html>
