@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Faking Text Area</title>
+            <style>
+                  h1 {
+                        text-align: center;
+                  }
+
+                  textarea {
+                        margin-left: 35%;
+                  }
+            </style>
+      </head>
+      <body>
+            <h1>Thử gõ gì vào đây xem</h1>
+            <form name="textview">
+                  <textarea name="textview" id="textview" cols="50" rows="10" onkeydown="display()"></textarea>
+            </form>
+            
+
+            <script>
+                  function display() {
+                        let text = ['I', ' ', 'AM', ' ', 'A', ' ', 'FOOL']
+                        let str = "";
+                        let userText = document.textview.textview.value;
+                        let userTextLength = userText.length;
+                        if (userTextLength > 0) {
+                              for (let i = 0; i < userTextLength; i++) {
+                                    str = str + text[i];
+                                    if (i == text.length) {
+                                          document.textview.textview.value = "";
+                                          str = "";
+                                    }
+                              }
+                        }
+                        document.textview.textview.value = str;
+                        str = "";
+                        setTimeout("display()",1)
+                  }
+            </script>
+      </body>
+</html>
