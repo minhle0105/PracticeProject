@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Bai 5</title>
+      </head>
+      <body>
+            <script>
+                  let array1 = ['c', 's', 'c', '2', '6', '1'];
+                  let array2 = ['c', 's', 'c', '2', '6', '1'];
+                  let array3 = ['d', 's', 'c', '2', '6', '1'];
+                  
+                  function checkArray(arr1, arr2) {
+                        if (arr1.length != arr2.length) {
+                              return false;
+                        }
+                        else {
+                              for (let i = 0; i < arr1.length; i++) {
+                                    if (arr1[i] != arr2[i]) {
+                                          return false;
+                                    }
+                              }
+                        }
+                        return true;
+                  }
+                  
+            </script>
+      </body>
+</html>
